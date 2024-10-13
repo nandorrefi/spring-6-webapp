@@ -58,3 +58,21 @@ Got a question about your Spring Framework 6 course? [Checkout these FAQs!](http
 * Like Spring Framework Guru on [Facebook](https://www.facebook.com/springframeworkguru/)
 * Follow Spring Framework Guru on [Twitter](https://twitter.com/spring_guru)
 * Connect with John Thompson on [LinkedIn](http://www.linkedin.com/in/springguru)
+
+# My Notes
+
+## H2 Database
+
+Spring Boot comes with a H2 in-memory database.
+
+To enable console you should configure the project. Example for .properties:
+```properties
+spring.h2.console.enabled=true
+```
+
+Then after starting up the spring boot service the logs will show something like this:
+```
+2024-10-13T...  INFO 3688 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:{DB ID}'
+```
+
+By default, on http://localhost:8080/h2-console you will find the console. The 'jdbc:h2:mem:{DB ID}' string will define the JDBC URL that you can connect to in the console.
