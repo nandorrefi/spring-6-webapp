@@ -61,6 +61,45 @@ Got a question about your Spring Framework 6 course? [Checkout these FAQs!](http
 
 # My Notes
 
+## Spring Framework and Spring Boot
+
+In 2003 EJB was referred to as "XML Java Hell" this is what Spring Framework replaced
+
+Spring Framework: collection of framework libraries
+
+Spring Boot: automated tooling for Spring applications, think about it like a wrapper around Spring
+
+Spring boot:
+* has starter dependencies
+* auto-configs for classes found on classpath (ex.: autoconfigs in memory database if H2 is on class path)
+
+By default Spring Boot:
+* has integrated tomcat server
+* responds with HTML via HTTP to requests made to tomcat server
+
+There are multiple Spring projects:
+* Spring Data	- Collection of projects for persisting data to SQL and noSQL DBs
+* Spring Cloud	- Tools for distributed systems, good for microservices and cloud services
+* Spring Security
+* Spring Session	- Distributed web app sessions
+* Spring Integration	- Enterprise Integration Patterns
+* Spring Batch	- batch processing
+* Spring State Machine	- open source state machine
+
+
+## App Overview
+
+![overview](docs/overview.png "Overview")
+
+A simple Spring Boot architecture that we will use as our first app.
+
+![packages](docs/packages.png "Packages")
+
+We will have 4 packages.
+
+Maven specifies the Standard Directory Layout that maven projects should follow, 
+this is what spring initializer follows too: https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html
+
 ## H2 Database
 
 Spring Boot comes with a H2 in-memory database.
@@ -76,6 +115,10 @@ Then after starting up the spring boot service the logs will show something like
 ```
 
 By default, on http://localhost:8080/h2-console you will find the console. The 'jdbc:h2:mem:{DB ID}' string will define the JDBC URL that you can connect to in the console.
+
+## Hibernate
+
+Hibernate creates the database tables by reflection based on our defined entities in the domain package.
 
 ## Spring MVC
 
@@ -101,8 +144,4 @@ Typically works in conjunction with a service, which contains the business logic
 ![spring-mvc-diagram](docs/spring_mvc_diagram.png "Spring MVC Diagram")
 
 During development, we won't interact much with the servlet and view. This is handled by Spring.
-
-## Hibernate
-
-Hibernate creates the database tables by reflection based on our defined entities in the domain package.
 
