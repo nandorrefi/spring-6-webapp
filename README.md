@@ -76,3 +76,33 @@ Then after starting up the spring boot service the logs will show something like
 ```
 
 By default, on http://localhost:8080/h2-console you will find the console. The 'jdbc:h2:mem:{DB ID}' string will define the JDBC URL that you can connect to in the console.
+
+## Spring MVC
+
+### MVC Architecture
+
+M: Model 
+
+V: View 
+
+C: Controller
+
+![mvc-diagram](docs/MVC_diagram.png "MVC Diagram")
+
+### Spring MVC
+
+MODEL: In Spring MVC it's a simple POJO, stores the data, view may or may not need it.
+
+VIEW: Data as requested by the client. Implemented with JSP, Thymeleaf, Jackson. Can be HTML, JSON, XML, text etc.
+
+CONTROLLER: Java class implemented to handle request mapping. Should contain minimal business logic. 
+Typically works in conjunction with a service, which contains the business logic.
+
+![spring-mvc-diagram](docs/spring_mvc_diagram.png "Spring MVC Diagram")
+
+During development, we won't interact much with the servlet and view. This is handled by Spring.
+
+## Hibernate
+
+Hibernate creates the database tables by reflection based on our defined entities in the domain package.
+
