@@ -73,9 +73,11 @@ Spring boot:
 * has starter dependencies
 * auto-configs for classes found on classpath (ex.: autoconfigs in memory database if H2 is on class path)
 
-By default Spring Boot:
-* has integrated tomcat server
+Spring Boot can autoconfig many features that you might need:
+* integrated tomcat server
 * responds with HTML via HTTP to requests made to tomcat server
+* authentication, authorization
+* etc.
 
 There are multiple Spring projects:
 * Spring Data	- Collection of projects for persisting data to SQL and noSQL DBs
@@ -102,7 +104,7 @@ this is what spring initializer follows too: https://maven.apache.org/guides/int
 
 ## H2 Database
 
-Spring Boot comes with a H2 in-memory database.
+Spring Boot can come with a H2 in-memory database.
 
 To enable console you should configure the project. Example for .properties:
 ```properties
